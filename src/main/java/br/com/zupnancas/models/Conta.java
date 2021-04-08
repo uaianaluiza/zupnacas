@@ -3,11 +3,13 @@ package br.com.zupnancas.models;
 import br.com.zupnancas.enums.Status;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDate;
 @Entity
 @Table(name = "contas")
 public class Conta {
+    @Id
     private int id;
     private Double valor;
     private String descricao;
