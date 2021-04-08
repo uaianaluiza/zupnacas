@@ -2,8 +2,12 @@ package br.com.zupnancas.models;
 
 import org.springframework.cglib.core.Local;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "creditos")
 public class Credito {
     @Id
     private int id;
