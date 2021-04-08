@@ -18,12 +18,6 @@ public class Conta {
     private LocalDate dataVencimento;
     private Status statusEnum;
 
-    @ManyToOne
-    private List<Saldo> saldos;
-
-    @ManyToMany
-    private List<Categoria> categorias;
-
     public Conta(){
 
     }
