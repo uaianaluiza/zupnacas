@@ -13,6 +13,8 @@ public class Credito {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private double valor;
+
+    @Column
     private String descricao;
     private LocalDate DataDeEntrada;
 

@@ -8,6 +8,8 @@ public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column
     private String nome;
 
     public Categoria(){

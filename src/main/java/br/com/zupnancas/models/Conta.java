@@ -13,6 +13,8 @@ public class Conta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private Double valor;
+
+    @Column
     private String descricao;
     private LocalDate dataDeSaida;
     private LocalDate dataVencimento;
