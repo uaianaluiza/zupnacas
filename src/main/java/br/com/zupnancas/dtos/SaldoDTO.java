@@ -8,15 +8,15 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 public class SaldoDTO {
-    @NotNull(message = "O campo cpf deve ser informado!")
-    @NotEmpty(message = "o campo cpf está vazio")
-    @CPF(message = "CPF inválido!")
+    @NotNull(message = "Favor informar o CPF")
+    @NotEmpty(message = "O campo cpf está vazio")
+    @CPF(message = "Este CPF inválido!")
     private String cpf;
 
-    @NotNull(message = "O campo valor deve ser informado!")
+    @NotNull(message = "Favor informar o valor")
     private Double valor;
 
-    @NotNull(message = "O campo limite deve ser informado!")
+    @NotNull(message = "Favor informar o limite")
     @Min(value = 0, message = "o valor do limite deve ser maior do que zero!")
     private Double limite;
 
