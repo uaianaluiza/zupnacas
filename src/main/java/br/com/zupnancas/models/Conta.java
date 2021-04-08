@@ -20,6 +20,9 @@ public class Conta {
     private LocalDate dataVencimento;
     private Status statusEnum;
 
+    @ManyToOne(optional = false)
+    private Saldo saldo;
+
     public Conta(){
 
     }

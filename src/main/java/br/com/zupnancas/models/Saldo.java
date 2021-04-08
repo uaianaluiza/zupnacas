@@ -8,13 +8,12 @@ import javax.persistence.*;
 public class Saldo {
 
     @Id
+    @Column
     private String CPF;
-
     private Double valor;
     private Double limite;
 
     public Saldo(){
-
     }
 
     public String getCPF() {

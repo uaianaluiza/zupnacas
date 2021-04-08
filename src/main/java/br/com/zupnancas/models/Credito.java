@@ -18,6 +18,12 @@ public class Credito {
     private String descricao;
     private LocalDate DataDeEntrada;
 
+    @ManyToOne(optional = false)
+    private Saldo saldo;
+
+    @ManyToMany
+    private List<Categoria> categorias;
+
     public Credito(){
 
     }
