@@ -2,20 +2,27 @@ package br.com.zupnancas.models;
 
 import br.com.zupnancas.enums.Status;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
+
 @Entity
 @Table(name = "contas")
 public class Conta {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private Double valor;
     private String descricao;
     private LocalDate dataDeSaida;
     private LocalDate dataVencimento;
     private Status statusEnum;
+
+    @ManyToOne
+    private List<Saldo> saldos;
+
+    @ManyToMany
+    private List<Categoria> categorias;
 
     public Conta(){
 

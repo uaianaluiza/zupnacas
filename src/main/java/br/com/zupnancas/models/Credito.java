@@ -2,18 +2,26 @@ package br.com.zupnancas.models;
 
 import org.springframework.cglib.core.Local;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "creditos")
 public class Credito {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private double valor;
     private String descricao;
-    private Local DataDeEntrada;
+    private LocalDate DataDeEntrada;
+
+    @ManyToOne
+    private Saldo saldos;
+
+    @ManyToMany
+    private List<Categoria> categorias;
+
 
     public Credito(){
 
@@ -43,11 +51,11 @@ public class Credito {
         this.descricao = descricao;
     }
 
-    public Local getDataDeEntrada() {
+    public LocalDate getDataDeEntrada() {
         return DataDeEntrada;
     }
 
-    public void setDataDeEntrada(Local dataDeEntrada) {
+    public void setDataDeEntrada(LocalDate dataDeEntrada) {
         DataDeEntrada = dataDeEntrada;
     }
 }
