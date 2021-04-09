@@ -23,6 +23,7 @@ public class Conta {
     @ManyToOne(optional = false)
     private Saldo saldo;
 
+
     public Conta(){
 
     }
