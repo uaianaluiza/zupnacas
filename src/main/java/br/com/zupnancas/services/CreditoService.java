@@ -1,7 +1,6 @@
 package br.com.zupnancas.services;
 
 import br.com.zupnancas.models.Credito;
-import br.com.zupnancas.repositories.CategoriaRepository;
 import br.com.zupnancas.repositories.CreditoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

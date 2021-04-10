@@ -11,4 +11,8 @@ public class SaldoController {
 
     @Autowired
     public SaldoService saldoService;
+
+    public SaldoController(SaldoService saldoService){
+        this.saldoService = saldoService;
+    }
 }
