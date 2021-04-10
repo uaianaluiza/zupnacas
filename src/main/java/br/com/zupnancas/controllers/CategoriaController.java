@@ -26,4 +26,14 @@ public class CategoriaController {
     public Categoria criarCategoria(@RequestBody @Valid CadastroDeCategoriaDTO cadastroDeCategoriaDTO){
         return categoriaService.cadastrarCategoria(cadastroDeCategoriaDTO.converterParaCategoria());
     }
+    @GetMapping("{id}/")
+    public void pesquisarCategoriaPeloId(@PathVariable int id){
+        categoriaService.buscarCategoriaPeloId(id);
+    }
+
+    @GetMapping("{id}/")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deletarCategoriaPeloId(@PathVariable int id){
+        categoriaService.deletarCategoriaPeloID(id);
+    }
 }
