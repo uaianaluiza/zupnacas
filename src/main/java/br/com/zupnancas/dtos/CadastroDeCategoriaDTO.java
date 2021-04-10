@@ -19,4 +19,10 @@ public class CadastroDeCategoriaDTO {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public Categoria converterParaCategoria(){
+        Categoria categoria = new Categoria();
+        categoria.setNome(this.nome);
+        return categoria;
+    }
 }
